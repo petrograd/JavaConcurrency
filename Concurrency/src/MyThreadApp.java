@@ -10,6 +10,17 @@ public class MyThreadApp {
     public final static long SIZE = 100;
 
     public static void main(String[] args) {
+        int availableProcessors = Runtime.getRuntime().availableProcessors();
+
+        for (int i = 0; i < availableProcessors; i++) {
+            Thread infiniteThread = new Thread(() -> {
+                while(true) {
+
+                }
+            });
+     //       infiniteThread.start();
+        }
+
         MyThread thread = new MyThread();
         thread.start();
 
